@@ -4,7 +4,6 @@ from collections import deque
 
 def bfs(graph, start, visited) :
     queue = deque([start])
-
     visited[start] = True # 맨 첫 노드를 방문 한 것으로
     while queue : # 큐가 빌 때 까지 반복
         # 큐에서 하나의 원소를 뽑아 출력
