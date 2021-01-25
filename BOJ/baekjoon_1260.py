@@ -2,10 +2,12 @@ from collections import deque
 
 N, M, V = map(int, input().split())
 
-graph = []
-graph.append([])
-for i in range(M) : 
-    graph.append(list(map(int, input().split())))
+graph = [[0] * (N + 1) for _ in range(N+1)]
+queue = []
+
+for _ in range(M) : 
+    x, y = map(int,input().split())
+    queue[x][y], queue[y][x] = 1, 1
 
 def dfs(graph, startDFS, visitedDFS) :
     visitedDFS[startDFS] = True # 첫 출발 노드는 항상 먼저 방문하는거니까
@@ -15,7 +17,6 @@ def dfs(graph, startDFS, visitedDFS) :
             dfs(graph, i, visitedDFS)
 
 def bfs(graph, startBFS, visitedBFS) :
-    queue = deque([startBFS])
     visitedBFS[startBFS] = True
     while queue :
         popBFS = queue.popleft()
