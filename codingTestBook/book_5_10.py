@@ -28,7 +28,6 @@ for i in range(M) :
                         if ice[nx][ny] == 0 :
                             queue.append((nx, ny))
                             ice[nx][ny] = 1
-
             else :
                 count += 1
 print(count)
