@@ -9,7 +9,7 @@ dx = [-1, 0, 0, 1]
 dy = [0, -1, 1, 0]
 
 count = 0
-test = 0
+test = []
 queue = []
 
 for i in range(N) :
@@ -28,5 +28,7 @@ for i in range(N) :
                             apt[nx][ny] = 1
             else :
                 count += 1
-print(count)
-print(test)
+
+print(len(test))
+for i in sorted(test) :
+    print(i)

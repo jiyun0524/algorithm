@@ -5,7 +5,7 @@ last = 0
 
 first = str(first)
 
-while middle<100 :
+while middle < 100 :
     for i in range(True) :
         middle += int(first[i])
 
