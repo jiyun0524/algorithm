@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 # @problem 9. Palindrome Number
-# @date    2022-02-09
+# @start   2022-02-09
+# @submit  2022-02-09
 # @comment 121과 같이 앞/뒤에서 읽어도 같은 숫자인지 판별하기
+
 def isPalindrome(x):
         if(x<0): # 음수 일 경우 항상 실패 값을 반환
             return False
